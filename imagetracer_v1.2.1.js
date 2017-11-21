@@ -1020,6 +1020,7 @@ function ImageTracer(){
 	// Helper function: loading an image from a URL, then executing callback with canvas as argument
 	this.loadImage = function(url,callback){
 		var img = new Image();
+		img.crossOrigin = 'Anonymous';
 		img.src = url;
 		img.onload = function(){
 			var canvas = document.createElement('canvas');
